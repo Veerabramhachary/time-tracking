@@ -1,0 +1,249 @@
+:root {
+    /* Primary*/ 
+
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+    /* Neutral */
+
+    --very-dark-blue: hsl(266, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    grid-template-areas: 
+    "one two three four"
+    "one five six seven";
+}
+
+.wrapper .item1{
+    grid-area: one;
+}
+.wrapper .item2{
+    grid-area: two;
+}
+
+.wrapper.item3{
+    grid-area: three;
+}
+
+.wrapper.item4{
+    grid-area: four;
+}
+
+.wrapper.item5{
+    grid-area: five;
+}
+
+.wrapper.item6{
+    grid-area: six;
+}
+
+.wrapper.item7{
+    grid-area: seven;
+}
+
+.item1 {
+    border-radius: 1rem;
+    background-color: var(--Dark-blue);
+} 
+
+.item1 .first {
+    background-color: var(--Blue);
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.item1 .first img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.item1 .first p {
+    font-size: .9rem;
+    color: white;
+    opacity: .5;
+}
+
+.item1 .first h1 {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 300;
+}
+
+.data p {
+    font-size: 1rem;
+}
+.btn {
+    opacity: .5;
+    margin: 1.5rem;
+    cursor: pointer;
+} 
+
+.active {
+    opacity: 1;
+}
+
+.item1 .btn:hover{
+    opacity: 1;
+}
+
+.item2 .content {
+    background: var(--Light-red-work);
+}
+
+.item3 .content {
+    background: var(--Soft-blue-play);
+}
+
+.item4 .content {
+    background: var(--Light-red-study);
+}
+
+.item5 .content {
+    background: var(--Lime-green-exercise);
+}
+
+.item6 .content {
+    background-color: var(--Violet-social);
+}
+
+.item7 .content {
+    background-color: var(--Soft-orange-self-care);
+}
+.content {
+    position: relative;
+    border-radius: 1rem;
+}
+
+.content .image {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 100%; 
+    transform: translate(-140%);
+    padding: 0;
+    margin: 0;
+}
+
+.image img {
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 1;
+}
+
+.box {
+    background: var(--Dark-blue);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.box:hover,
+.box:focus {
+    background: var(--Desaturated-blue);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.content p {
+    opacity: .4;
+}
+
+@media (width < 500px) {
+    body {
+        padding: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .wrapper {
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .data .first {
+        display: flex;
+        align-items: center;
+    }
+    .data .first h1 {
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+    }
+    .data .first .flex{
+        margin: 1rem;
+    }
+    .flex1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h3 {
+        font-size: 1.7rem;
+    }
+    .flex1 p {
+        font-size: 0.7rem;
+    }
+}
