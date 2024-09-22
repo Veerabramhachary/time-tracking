@@ -12,7 +12,7 @@ dailyTitle.addEventListener('click',()=> {
 weeklyTitle.addEventListener('click',()=> {
     weeklyTitle.classList.toggle("active");
     monthlyTitle.classList.remove('active');
-    dailyTitle.classList.toggle("active");
+    dailyTitle.classList.remove("active");
     weekly2();
 })
 
