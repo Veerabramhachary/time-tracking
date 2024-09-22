@@ -4,21 +4,15 @@ const monthlyTitle = document.querySelector("#monthly");
 
 dailyTitle.addEventListener('click',()=> {
     dailyTitle.classList.toggle("active");
-    weeklyTitle.classList.toggle("active");
-    monthlyTitle.classList.toggle('active');
     daily2();
 })
 
 weeklyTitle.addEventListener('click',()=> {
     weeklyTitle.classList.toggle("active");
-    monthlyTitle.classList.toggle('active');
-    dailyTitle.classList.toggle("active");
     weekly2();
 })
 
 monthlyTitle.addEventListener('click', () => {
-    weeklyTitle.classList.toggle("active");
-    dailyTitle.classList.toggle("active");
     monthlyTitle.classList.toggle("active");
     monthly();
 })
