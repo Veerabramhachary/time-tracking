@@ -4,9 +4,9 @@ const monthlyTitle = document.querySelector("#monthly");
 
 dailyTitle.addEventListener('click',()=> {
     dailyTitle.classList.toggle("active");
-    weekly.classList.toggle("active");
+    weeklyTitle.classList.remove("active");
+    monthlyTitle.classList.remove('active');
     daily2();
-    
 })
 
 weeklyTitle.addEventListener('click',()=> {
